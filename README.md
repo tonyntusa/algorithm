@@ -6,3 +6,5 @@ https://neetcode.io/practice
 https://seanprashad.com/leetcode-patterns/
 
 https://leetcode.com/explore/interview/card/top-interview-questions-easy/
+
+https://leetcode.com/problem-list/top-interview-questions/
