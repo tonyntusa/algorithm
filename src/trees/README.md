@@ -1,3 +1,6 @@
-Deep First Search (DFS) - https://www.youtube.com/watch?v=PMMc4VsIacU&ab_channel=Reducible
+Deep First Search (DFS) - https://youtu.be/PMMc4VsIacU?t=903
+  + Recursive
+  + Queue
 
-Breath First Search (BFS) - https://www.youtube.com/watch?v=xlVX7dXLS64&ab_channel=Reducible
+Breath First Search (BFS) - https://youtu.be/xlVX7dXLS64?t=225
+  + Stack
