@@ -34,13 +34,13 @@ public class Easy_206_Reverse_Linked_List {
     public ListNode reverseList(ListNode head) {
         /*
         IDEA: We use 3 pointer
-            pre = null
-            cur = head
+            - pre = null
+            - cur = head
+            - next_temp = cur.next (USED in WHILE): THAT USED during move cur to next. It will help to remember when cur not REVERSE
 
-            next_temp = cur.next THAT USED during move cur to next. It will help to remember when cur not REVERSE
-
-                        c=head  n
-            pre(NULL)   1    -> 2 -> 3 -> 4 -> NULL
+                       cur    next
+            pre(NULL)   1   -> 2 -> 3 -> 4 -> NULL
+                       head
 
         */
 
