@@ -6,7 +6,7 @@ Breath First Search (BFS) - https://youtu.be/xlVX7dXLS64?t=225
   - Queue
     ```
     Queue<String> queue = new LinkedList<>();
-    queue.offer("value");   queue.add("value");
-    queue.poll();           queue.remove();
+    queue.offer("value");   queue.add("value");   // Add object to Queue
+    queue.poll();           queue.remove();       // Remove object to Queue
     ```
   
