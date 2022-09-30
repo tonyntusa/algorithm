@@ -19,3 +19,7 @@ Breath First Search (BFS) - https://youtu.be/xlVX7dXLS64?t=225
     String value = queue.remove();       // Remove object to Queue
     ```
   
+Binary Tree Traversal
+  + PreOrder Traversal  (ROOT, LEFT, RIGHT)
+  + InOrder             (LEFT, ROOT, RIGHT)
+  + PostOrder           (LEFT, RIGHT, ROOT)  
