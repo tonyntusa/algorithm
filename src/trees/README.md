@@ -20,6 +20,6 @@ Breath First Search (BFS) - https://youtu.be/xlVX7dXLS64?t=225
     ```
   
 Binary Tree Traversal
-  + PreOrder Traversal  (ROOT, LEFT, RIGHT)
-  + InOrder             (LEFT, ROOT, RIGHT)
-  + PostOrder           (LEFT, RIGHT, ROOT)  
+  + PreOrder Traversal  (ROOT, LEFT, RIGHT) --> PreOrder it means ROOT PRE(FIRST)
+  + InOrder             (LEFT, ROOT, RIGHT) --> InOrder it means ROOT IN MIDDLE
+  + PostOrder           (LEFT, RIGHT, ROOT) --> PostOrder it means ROOT POST(LAST) 
