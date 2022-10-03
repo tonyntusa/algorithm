@@ -27,3 +27,11 @@ for(Map.Entry<String, Integer> entry : map.entrySet()){
 Set<Interger> set = new HashSet<>();
 for(Integer key : set){}
 ```
+
+Java data structure
++ ArrayList and LinkedList (https://stackabuse.com/difference-between-arraylist-and-linkedlist-in-java-code-and-performance)
+```
+If elements are going to be fetched often, --> use ArrayList. 
+If constant-time insertions are needed or if the total size is unknown beforehand --> LinkedList is preferred.
+
+```
