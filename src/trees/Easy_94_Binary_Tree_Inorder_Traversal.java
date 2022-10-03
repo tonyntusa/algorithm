@@ -39,7 +39,10 @@ public class Easy_94_Binary_Tree_Inorder_Traversal {
     https://www.youtube.com/watch?v=o_T8MswDI_Y&list=PLK0ZC7fyo01IN6L3X2c7VKL6ErjIIj88d&index=5&ab_channel=FisherCoder
 
     IDEA: Recursive DFS to traverse Inorder (LEFT, ROOT, RIGHT)
-        - dfs(root, results list){}
+        - dfs(root, results list)
+            dfs(left, res)      // LEFT
+            res.add(root.val)   // ROOT
+            dfs(right, res)     // RIGHT
 
         NOTE: 3 types of Traversal
             + Inorder Traversal (LEFT, ROOT, RIGHT)
