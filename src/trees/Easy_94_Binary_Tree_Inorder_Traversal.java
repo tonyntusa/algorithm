@@ -3,6 +3,7 @@ package trees;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 /**
  https://leetcode.com/problems/binary-tree-inorder-traversal/
@@ -37,12 +38,10 @@ import java.util.List;
 public class Easy_94_Binary_Tree_Inorder_Traversal {
     /*
     https://www.youtube.com/watch?v=o_T8MswDI_Y&list=PLK0ZC7fyo01IN6L3X2c7VKL6ErjIIj88d&index=5&ab_channel=FisherCoder
+    https://youtu.be/QxFOR8sQuB4?list=PLK0ZC7fyo01IN6L3X2c7VKL6ErjIIj88d&t=97
 
     IDEA: Recursive DFS to traverse Inorder (LEFT, ROOT, RIGHT)
-        - dfs(root, results list)
-            dfs(left, res)      // LEFT
-            res.add(root.val)   // ROOT
-            dfs(right, res)     // RIGHT
+        - dfs(root, results list){}
 
         NOTE: 3 types of Traversal
             + Inorder Traversal (LEFT, ROOT, RIGHT)
@@ -51,10 +50,7 @@ public class Easy_94_Binary_Tree_Inorder_Traversal {
     */
 
     public List<Integer> inorderTraversal(TreeNode root) {
-        // Why we use LinkedList (NOT ArrayList)
-        // It's because we only want to insert value to List (We don't want to get)
-        // Insert to LinkedList is O(1)
-        List<Integer> res = new LinkedList<>();
+        List<Integer> res = new LinkedList();
 
         // DFS
         dfs(root, res);
@@ -73,5 +69,50 @@ public class Easy_94_Binary_Tree_Inorder_Traversal {
 
         // LEFT
         dfs(root.right, res);
+    }
+
+    /*
+    https://youtu.be/QxFOR8sQuB4?list=PLK0ZC7fyo01IN6L3X2c7VKL6ErjIIj88d&t=78
+
+    IDEA: We can use stack (OR RECURSIVE) to InOrder (LEFT, ROOT, RIGHT)
+        - Stack<TreeNode> stack = new Stack<>();
+        - while(!stack.isEmpty() || curNode != null){
+            // Add left nodes and root to stack
+            while(curNode != null){
+                stack.push(curNode);
+                curNode = curNode.left;
+            }
+
+            // Pop node out of stack and ADD to list result
+            curNode = stack.pop();
+
+            // Update pointer to right
+            curNode = curNode.right
+        }
+    */
+    public List<Integer> inorderTraversalIterator(TreeNode root) {
+        List<Integer> res = new LinkedList();
+
+        // Initial a stack
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode curNode = root;
+
+        // InOrder traversal (LEFT, ROOT, RIGHT)
+        while(!stack.isEmpty() || curNode != null){
+            // LEFT nodes AND root will be added to stack
+            while(curNode != null){
+                stack.push(curNode);
+                curNode = curNode.left;
+            }
+
+            // Pop value out of statck and ADD to list result
+            curNode = stack.pop();
+            res.add(curNode.val); // ADD to list after poping from stack
+
+            // Move pointer to RIGHT
+            curNode = curNode.right;
+        }
+
+        return res;
     }
 }
