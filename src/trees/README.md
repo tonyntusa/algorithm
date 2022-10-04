@@ -1,6 +1,6 @@
 Deep First Search (DFS) - https://youtu.be/PMMc4VsIacU?t=903
   + Recursive
-  + Stack
+  + Stack (Leetcode 94, 144, 145)
     ```
     Stack<Integer> stack = new Stack<>();
     stack.push(1);  // Add object to stack
