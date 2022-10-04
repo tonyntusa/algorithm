@@ -1,5 +1,5 @@
 Deep First Search (DFS) - https://youtu.be/PMMc4VsIacU?t=903
-  + Recursive
+  + Recursive (Leetcode 94, 144, 145)
   + Stack (Leetcode 94, 144, 145)
     ```
     Stack<Integer> stack = new Stack<>();
@@ -9,7 +9,7 @@ Deep First Search (DFS) - https://youtu.be/PMMc4VsIacU?t=903
     int value = stack.peek();   // Get an object BUT not REMOVE
     ```    
 Breath First Search (BFS) - https://youtu.be/xlVX7dXLS64?t=225
-  - Queue
+  - Queue (Letcode 102)
     ```
     Queue<String> queue = new LinkedList<>();
     queue.offer("value"); // Add object to Queue  
