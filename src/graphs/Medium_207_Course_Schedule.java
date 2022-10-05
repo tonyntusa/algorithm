@@ -83,6 +83,7 @@ public class Medium_207_Course_Schedule {
         // STEP1: Use SET(or QUEUE) to store courses with NO indegree AND MAP to map a vertex with number of indegre
         // Use Map to count number of indegree of a course (vertex)
         // <course, number of edges going to (IN) the course>
+        // Map: {0: 0, 1: 1, 2: 1: 3: 2}
         // Imaging that, INDEX of array is course, array value is number of edges going to (IN) the course (IF we use array)
         int[] mapIndegree = new int[numCourses];
         for(int[] pre: pres){
@@ -91,6 +92,7 @@ public class Medium_207_Course_Schedule {
         }
 
         // Filter courses with numOfIndegree = 0 and PUT to QUEUE (or SET)
+        // queue = <0>
         Queue<Integer> queue = new LinkedList<>();
         for(int course=0; course<mapIndegree.length; course++){
             if(mapIndegree[course] == 0) queue.offer(course);
@@ -106,9 +108,9 @@ public class Medium_207_Course_Schedule {
             for(int[] pre: pres){
                 // Update MAP and insert course to QUEUE if numOfIndegree=0
                 if(course == pre[1]){
-                    mapIndegree[pre[0]]--;
+                    mapIndegree[pre[0]]--; // Update MAP by reduce numOfIndegree - 1
                     if(mapIndegree[pre[0]] == 0)
-                        queue.offer(pre[0]);
+                        queue.offer(pre[0]); // Add course queue if numOfIndegree = 0 for that course
                 }
             }
         }
